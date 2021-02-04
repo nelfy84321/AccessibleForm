@@ -1,0 +1,56 @@
+form {
+	margin: 0 auto;
+	width: 500px;
+	display: flex;
+	flex-flow: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.first-section,
+.second-section,
+.third-section {
+	display: flex;
+	flex-flow: column;
+}
+
+.first-section,
+.second-section {
+	width: 40%;
+}
+
+.third-section {
+	width: 100%;
+}
+
+.fourth-section {
+	display: flex;
+	justify-content: space-around;
+	margin-top: 15px;
+	width: 100%;
+}
+
+input,
+select {
+	margin-bottom: 10px;
+	display: block;
+}
+
+.radio-lable,
+input[type='radio'] {
+	display: inline;
+	vertical-align: middle;
+	margin: 0px;
+}
+
+@media screen and (max-width: 768px) {
+	form {
+		width: 90%;
+		flex-flow: column;
+	}
+
+	.first-section,
+	.second-section {
+		width: 100%;
+	}
+}

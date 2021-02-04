@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<title>Accessible Form</title>
+	</head>
+	<body>
+		<form>
+			<div class="first-section">
+				<label for="fName">First name*</label>
+				<input type="text" id="fName" name="fName" placeholder="First Name" aria-required="true" required />
+
+				<label for="sName">Second name*</label>
+				<input type="text" id="sName" name="sName" placeholder="Second Name" aria-required="true" required />
+
+				<label for="email">Email*</label>
+				<input type="email" id="email" name="email" placeholder="Email" aria-required="true" required />
+
+				<label for="phone">Phone*</label>
+				<small>Format: +380123456789 </small>
+				<input
+					type="tel"
+					id="phone"
+					name="phone"
+					pattern="^\+?3?8?(0\d{9})$"
+					placeholder="Phone Number"
+					aria-required="true"
+					required
+				/>
+			</div>
+			<div class="second-section">
+				<label for="date">Delivery Date*</label>
+				<input type="date" id="date" name="date" aria-required="true" required />
+
+				<label for="payment">Payment type*</label>
+				<div>
+					<label for="cash" class="radio-lable">Cash</label>
+					<input type="radio" id="cash" name="payment" value="cash" aria-required="true" required />
+				</div>
+				<div>
+					<label for="card" class="radio-lable">Card</label>
+					<input type="radio" id="card" name="payment" value="card" />
+				</div>
+
+				<label for="deliveryType">Delivery Type*</label>
+				<select type="text" id="deliveryType" name="delivery" aria-required="true" required>
+					<option value="PriorityExpress">Priority Mail Express</option>
+					<option value="Priority">Priority Mail</option>
+				</select>
+
+				<label for="subscribe">Subscribe for updates</label>
+				<input type="checkbox" id="subscribe" value="subscribe" />
+			</div>
+
+			<div class="third-section">
+				<label for="comment">Comment</label>
+				<textarea type="text" id="comment" name="comment" placeholder="Type here"></textarea>
+			</div>
+
+			<div class="fourth-section">
+				<input type="reset" value="Clear" />
+				<input type="submit" value="Submit" />
+			</div>
+		</form>
+	</body>
+</html>
